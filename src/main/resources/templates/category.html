@@ -11,13 +11,13 @@
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Integrated Project</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img th:src="@{/images/logo.jpg}"  src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/>
+            <img th:src="@{/images/logo.jpg}"  src="../static/images/logo.jpg" width="auto" height="40" class="d-inline-block align-top" alt=""/>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,13 +38,17 @@
         </div>
     </div>
 </nav>
+<div class="container-fluid p-3 my-3 bg-dark text-white">
+    <h1 align="center">Welcome to Category Section</h1>
+    <p align="center">Here you can Add Delete and Update the Categories</p>
+</div>
 <div class="container">
 
-    <a th:href="@{/admin/categories/add}" style="margin: 20px 0" class="btn btn-success">Add </a>
+    <a th:href="@{/admin/categories/add}" style="margin: 20px 0; color: white" class="btn btn-info">Insert New Category</a>
     <table class="table">
-        <thead class="thead-light">
+        <thead class="thead-dark">
         <tr>
-            <th scope="col">Id</th>
+<!--            <th scope="col">Id</th>-->
             <th scope="col">Category</th>
             <th scope="col">Delete</th>
             <th scope="col">Update</th>
@@ -52,12 +56,12 @@
         </thead>
         <tbody>
 
-        <tr th:each="category, iStat : ${categories}">
-            <th scope="row" th:text="${iStat.index + 1}">1</th>
+        <tr th:each="category, iStat : ${categories}" class="table-active">
+<!--            <th scope="row" th:text="${iStat.index + 1}">1</th>-->
             <td th:text="${category.name}">Larry</td>
 
             <td><a href="" th:href="@{/admin/categories/delete/{id}(id=${category.id})}"><i class="fa fa-trash" style="font-size:25px;"></i></a></td>
-            <td><a href="" th:href="@{/admin/categories/update/{id}(id=${category.id})}"<i class="fa fa-edit" style="font-size:25px"></i></a></td>
+            <td><a href="" th:href="@{/admin/categories/update/{id}(id=${category.id})}"><i class="fa fa-edit" style="font-size:25px"></i></a></td>
 
         </tr>
         </tbody>

@@ -45,8 +45,13 @@ public class AdminController {
     }
     @GetMapping("/admin/categories/delete/{id}")
     public String deleteCat(@PathVariable int id){
-        categoryService.removeCategoryById(id);
-        return "redirect:/admin/categories";
+        try {
+            categoryService.removeCategoryById(id);
+            return "redirect:/admin/categories";
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return "redirect:/admin/categories";
+        }
     }
     @GetMapping("/admin/categories/update/{id}")
     public String updateCat(@PathVariable int id, Model model){
