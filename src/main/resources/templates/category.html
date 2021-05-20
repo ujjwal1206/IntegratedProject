@@ -12,6 +12,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Integrated Project</title>
+    <style>
+        nav{
+    background: linear-gradient(to right, #536162, #f3f4ed);
+  }
+  .table{
+    border-radius: 2%;
+    background: linear-gradient(to right, #bbbbbb, #f3f4ed);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.200);
+  }
+  .table:hover{
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.400);
+  }
+  .btn{
+    color: #3b5998;
+    background: #ffffff;
+    width: 251px;
+    height: 40px;
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    border: 4px solid #3b5998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+    transition: all .4s;
+    cursor: pointer;
+  }
+  .btn i{
+    color: #3b5998;
+    margin: 8px;
+    transition: all .4s;
+  }
+  .btn .fa-plus-square{
+    color: #4285f4;
+  }
+  .btn:hover{
+    background: #3b5998;
+    color: #e2e2e2;
+  }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
@@ -40,11 +82,11 @@
 </nav>
 <div class="container-fluid p-3 my-3 bg-dark text-white">
     <h1 align="center">Welcome to Category Section</h1>
-    <p align="center">Here you can Add Delete and Update the Categories</p>
+    <p align="center">Here you can Add Delete and Update the Categories. Happy Selling!</p>
 </div>
 <div class="container">
 
-    <a th:href="@{/admin/categories/add}" style="margin: 20px 0; color: white" class="btn btn-info">Insert New Category</a>
+    <a th:href="@{/admin/categories/add}" style="margin: 20px 0;" class="btn btn-info"><i class="fas fa-plus-square"></i>Insert New Category</a>
     <table class="table">
         <thead class="thead-dark">
         <tr>

@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Integrated Project</title>
+    <style>
+        nav{
+    background: linear-gradient(to right, #536162, #f3f4ed);
+  }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
@@ -36,28 +41,28 @@
         </div>
     </div>
 </nav>
-<div class="jumbotron text-center">
-    <h1 class="display-4">Welcome back, Admin</h1>
-    <p>Easily manage your data from this admin <mark>CMS</mark></p>
+<div class="container-fluid p-3 my-3 bg-dark text-white">
+    <h1 align="center">Welcome back, Admin</h1>
+    <p align="center">Easily manage your data from this admin</p>
 </div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 pt-3" >
-            <div class="card" style="background-color:white;">
+            <div class="card bg-light text-black">
                 <div class="card-body">
                     <h4 class="card-title">Categories</h4>
                     <p class="card-text">Manage the categories section here.</p>
-                    <a href="#" th:href="@{/admin/categories}" class="card-link btn btn-primary">Manage</a>
+                    <a href="#" th:href="@{/admin/categories}" class="card-link btn btn-info">Manage</a>
 
                 </div>
             </div>
         </div>
         <div class="col-sm-3 pt-3" >
-            <div class="card" style="background-color:white;">
+            <div class="card bg-light text-black">
                 <div class="card-body">
                     <h4 class="card-title">Products</h4>
                     <p class="card-text">Manage all the products here.</p>
-                    <a href="#" th:href="@{/admin/products}" class="card-link btn btn-primary">Manage</a>
+                    <a href="#" th:href="@{/admin/products}" class="card-link btn btn-info">Manage</a>
 
                 </div>
             </div>
