@@ -8,10 +8,91 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Integrated Project</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+  body{
+
+  }
+  nav{
+    background: linear-gradient(to right, #536162, #f3f4ed);
+  }
+  #header{
+    height: -10px;
+  }
+  .table{
+    border-radius: 2%;
+    background: linear-gradient(to right, #bbbbbb, #f3f4ed);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.200);
+  }
+  .table:hover{
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.400);
+  }
+  .thead{
+    background-color: #334443;
+    color: white;
+  }
+  .btn{
+    color: #3b5998;
+    background: #ffffff;
+    width: 251px;
+    height: 40px;
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    border: 4px solid #3b5998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+    transition: all .4s;
+    cursor: pointer;
+  }
+  .btn i{
+    color: #3b5998;
+    margin: 8px;
+    transition: all .4s;
+  }
+  .btn .fa-plus-square{
+    color: #4285f4;
+  }
+  .btn:hover{
+    background: #3b5998;
+    color: #e2e2e2;
+  }
+  #btn1 .fa-trash-alt{
+    color: #ce1212;
+  }
+  #btn2 .fa-edit{
+    color: #f9b208;
+  }
+  #btn1{
+    border: 4px solid #ce1212;
+    color: #ce1212;
+
+  }
+  #btn2{
+    border: 4px solid #f9b208;
+    color: #f9b208
+  }
+  #btn1:hover{
+    background: #fb3640;
+  }
+  #btn2:hover{
+    background: #ffd56b;
+  }
+  #btn1, #btn2 {
+    height: 50px;
+    width: 80px;
+    background: #ffffff;
+  }
+
+</style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #34656d; color: #ffffff;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img th:src="@{/images/logo.png}"  src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/>
@@ -35,13 +116,18 @@
     </div>
   </div>
 </nav>
+<div class="container-fluid p-3 my-3 bg-dark text-white" id="header" style="margin: 0px">
+    <h1 align="center">Welcome to Add Products Section</h1>
+    <p align="center">Here you can Add New Products for your inventory and get them going quickly. Happy Selling!</p>
+</div>
 <div class="container-fluid">
 
-  <a th:href="@{/admin/products/add}" style="margin: 20px 0" class="btn btn-primary">Add Product</a>
+  <a th:href="@{/admin/products/add}" style="margin: 20px 0" class="btn"><i class="fas fa-plus-square"></i>
+    Add Product</a>
   <table class="table">
-    <thead class="thead-light">
+    <thead class="thead-dark">
     <tr>
-      <th scope="col">SN</th>
+      <!-- <th scope="col">Serial No</th> -->
       <th scope="col">Product Name</th>
       <th scope="col">Category</th>
       <th scope="col">Preview</th>
@@ -52,13 +138,13 @@
     <tbody>
 
     <tr th:each="product, iStat : ${products}">
-      <th scope="row" th:text="${iStat.index + 1}">1</th>
+      <!-- <th scope="row" th:text="${iStat.index + 1}">1</th> -->
       <td th:text="${product.name}">Larry</td>
       <td th:text="${product.category.name}">Larry</td>
       <td><img src="" height="100px" width="100px"  th:src="@{${'/images/' + product.imageName}}"></td>
 
-      <td><a href="" th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn btn-danger"><i class="fa fa-trash" style="font-size:25px;"></i></a></td>
-      <td><a href="" th:href="@{/admin/product/update/{id}(id=${product.id})}" class="btn btn-warning"><i class="fa fa-edit" style="font-size:25px"></i></a></td>
+      <td><a href="" th:href="@{/admin/product/delete/{id}(id=${product.id})}" class="btn" id="btn1"><i class="fas fa-trash-alt"></i></a></td>
+      <td><a href="" th:href="@{/admin/product/update/{id}(id=${product.id})}" class="btn" id="btn2"><i class="fas fa-edit"></i></a></td>
 
     </tr>
     </tbody>
@@ -71,4 +157,5 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
+
 </html>
