@@ -27,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                .antMatchers("/","/shop/**","/register").permitAll()
+                .antMatchers("/","/shop/**","/register","jdbc:postgresql://localhost:5432/IntegratedProject").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
