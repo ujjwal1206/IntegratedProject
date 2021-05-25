@@ -1,5 +1,6 @@
 package com.example.Project.Integrated.Project.controller;
 
+import com.example.Project.Integrated.Project.global.GlobalData;
 import com.example.Project.Integrated.Project.service.CategoryService;
 import com.example.Project.Integrated.Project.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ public class HomeController {
 
     @GetMapping({"/","/home"})
     public String home(Model model){
+        model.addAttribute("cartCount", GlobalData.cart.size());
         return "index";
     }
 
@@ -24,6 +26,7 @@ public class HomeController {
     public String shop(Model model){
         model.addAttribute("categories", categoryService.getAllCategory());
         model.addAttribute("products", productService.getAllProduct());
+        model.addAttribute("cartCount",GlobalData.cart.size());
         return "shop";
     }
 
@@ -31,12 +34,15 @@ public class HomeController {
     public String shopByCategory(Model model, @PathVariable int id){
         model.addAttribute("categories", categoryService.getAllCategory());
         model.addAttribute("products", productService.getAllProductsByCategoryId(id));
+        model.addAttribute("cartCount",GlobalData.cart.size());
         return "shop";
     }
 
     @GetMapping("/shop/viewproduct/{id}")
     public String viewProduct(Model model, @PathVariable int id){
         model.addAttribute("product", productService.getProductById(id).get());
+        model.addAttribute("cartCount",GlobalData.cart.size());
         return "viewProduct";
     }
+
 }
