@@ -587,7 +587,7 @@ img{
         <!--========== HEADER ==========-->
         <header class="l-header" id="header">
             <nav class="nav bd-container">
-                <a href="#" class="nav__logo">Tasty</a>
+                <a href="#" class="nav__logo">SUP</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -630,6 +630,11 @@ img{
                     </div>
 
                     <img th:src="@{/images/home1.jpeg}" alt="" class="home__img">
+
+<!--                    <img th:src="@{/images/img/home.jpg}" alt="" class="home__img">-->
+
+<!--                    <img th:src="@{/images/home1.jpeg}" alt="" class="home__img">-->
+
                 </div>
             </section>
 
@@ -643,7 +648,7 @@ img{
                         <a href="#" class="button">Explore history</a>
                     </div>
 
-                    <img th:src="@{assests/img/about.jpg}" src="assets/img/about.jpg" alt="" class="about__img">
+                    <img th:src="@{/images/about.jpg}" src="assets/img/about.jpg" alt="" class="about__img">
                 </div>
             </section>
 
@@ -680,7 +685,7 @@ img{
 
                 <div class="menu__container bd-grid">
                     <div class="menu__content">
-                        <img src="assets/img/plate1.jpg" alt="" class="menu__img" style="border-radius: 20%">
+                        <img src="@{img/plate1.jpg}" alt="" class="menu__img" style="border-radius: 20%">
                         <h3 class="menu__name">Herbal Medicine</h3>
                         <span class="menu__detail">Great for Cough And Cold</span>
                         <span class="menu__preci">$5.00</span>
@@ -688,7 +693,7 @@ img{
                     </div>
 
                     <div class="menu__content">
-                        <img src="assets/img/gloves.jpg" alt="" class="menu__img" style="border-radius: 20%">
+                        <img th:src="@{/img/gloves.jpg}" alt="" class="menu__img" style="border-radius: 20%">
                         <h3 class="menu__name">Rubber Latex Gloves</h3>
                         <span class="menu__detail">Best Quality Surgical Gloves</span>
                         <span class="menu__preci">$1.00</span>
@@ -696,7 +701,7 @@ img{
                     </div>
 
                     <div class="menu__content">
-                        <img src="assets/img/masks.jpg" alt="" class="menu__img" style="border-radius: 20%">
+                        <img th:src="@{/img/masks.jpg}" alt="" class="menu__img" style="border-radius: 20%">
                         <h3 class="menu__name">Surgical Masks</h3>
                         <span class="menu__detail">Top Quality Masks at Cheap Price</span>
                         <span class="menu__preci">$0.20</span>
@@ -774,10 +779,10 @@ img{
                 <div class="footer__content">
                     <h3 class="footer__title">Address</h3>
                     <ul>
-                        <li>Cahndigarh - India</li>
+                        <li>Chandigarh - India</li>
                         <li>Chitkara University</li>
                         <li>9134 - 915 - 606</li>
-                        <li>tastyfood@email.com</li>
+                        <li>suppharmacy@email.com</li>
                     </ul>
                 </div>
             </div>
