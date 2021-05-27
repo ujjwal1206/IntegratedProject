@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
     <head>
@@ -629,7 +629,7 @@ img{
                         <a href="#" class="button">View Menu</a>
                     </div>
 
-                    <img src="assets/img/home.jpg" alt="" class="home__img">
+                    <img th:src="@{/images/home1.jpg}" alt="" class="home__img">
                 </div>
             </section>
 
@@ -643,7 +643,7 @@ img{
                         <a href="#" class="button">Explore history</a>
                     </div>
 
-                    <img src="assets/img/about.jpg" alt="" class="about__img">
+                    <img th:src="@{assests/img/about.jpg}" src="assets/img/about.jpg" alt="" class="about__img">
                 </div>
             </section>
 
