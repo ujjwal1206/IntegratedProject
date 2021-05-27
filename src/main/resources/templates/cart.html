@@ -10,7 +10,36 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 
-    <title>Document</title>
+    <title>Integrated Project</title>
+    <style>
+<!--         nav{-->
+<!--    background: linear-gradient(to right, #536162, #f3f4ed);-->
+<!--  }-->
+<!--  .card{-->
+<!--    border-radius: 2%;-->
+<!--    background: linear-gradient(to right, #bbbbbb, #f3f4ed);-->
+<!--    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.200);-->
+<!--  }-->
+<!--  .card:hover{-->
+<!--    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.400);-->
+<!--  }-->
+.card:hover{
+box-shadow: 0 0 50px rgba(6, 156, 84, 0.200);
+}
+#p1{
+color:#069C54;
+}
+#btn{
+background-color:#069C54;
+color:white;
+}
+#trash{
+color:#e34a17;
+}
+#a1{
+color:#069C54;
+}
+    </style>
 </head>
 <body>
 
@@ -18,7 +47,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img th:src="@{/images/logo.png}"  src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/>
+            <img th:src="@{static/images/logo.png}"  src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -72,7 +101,7 @@
                                 <div class="col-md-5 col-lg-3 col-xl-3">
                                     <div class="mb-3 mb-md-0">
                                         <img class="img-fluid w-100"
-                                             th:src="@{${'/productImages/' + item.imageName}}"
+                                             th:src="@{${'/images/' + item.imageName}}"
                                              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
 
                                     </div>
@@ -90,7 +119,7 @@
                                         </div>
                                         <div class="mt-5 d-flex justify-content-between align-items-center">
                                             <div>
-                                                <a href="#!" th:href="@{/cart/removeItem/{index}(index=${iStat.index})}"  type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                                                <a href="#!" th:href="@{/cart/removeItem/{index}(index=${iStat.index})}"  type="button" id="trash" class="card-link small text-uppercase mr-3"><i
                                                         class="fas fa-trash-alt mr-1"></i> Remove item </a>
 
                                             </div>
@@ -101,14 +130,11 @@
                             </div>
                             <hr class="mb-4">
 
-                            <p class="text-primary mb-0"><i class="fas fa-info-circle mr-1"></i> Do not delay the purchase, adding
-                                items to your cart does not mean booking them.</p>
+                            <p class="text mb-0" id="p1"><i class="fas fa-info-circle mr-1"></i> <strong>Do not delay the purchase, adding
+                                items to your cart does not mean booking them.</strong></p>
 
                         </div>
                     </div>
-
-
-
 
                 </div>
                 <!--Grid column-->
@@ -142,7 +168,7 @@
                                 </li>
                             </ul>
 
-                            <a th:href="@{/checkout}" h class="btn btn-primary btn-block waves-effect waves-light">go to
+                            <a th:href="@{/checkout}" id="btn" class="btn btn-block waves-effect waves-light">go to
                                 checkout</a>
 
                         </div>
@@ -154,7 +180,7 @@
                         <div class="card-body">
 
                             <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
-                               aria-expanded="false" aria-controls="collapseExample">
+                               aria-expanded="false" aria-controls="collapseExample" id="a1">
                                 Add a discount code (optional)
                                 <span><i class="fas fa-chevron-down pt-1"></i></span>
                             </a>
