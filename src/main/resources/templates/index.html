@@ -587,7 +587,7 @@ img{
         <!--========== HEADER ==========-->
         <header class="l-header" id="header">
             <nav class="nav bd-container">
-                <a href="#" class="nav__logo">Tasty</a>
+                <a href="#" class="nav__logo" th:href="@{/}">SUP</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -629,10 +629,7 @@ img{
                         <a href="#" class="button">View Menu</a>
                     </div>
 
-
-                    <img th:src="@{/assets/img/home.jpg}" alt="" class="home__img">
-
-                    <img th:src="@{/images/home1.jpg}" alt="" class="home__img">
+                    <img th:src="@{/images/home1.jpeg}" alt="" class="home__img">
 
                 </div>
             </section>
@@ -647,7 +644,7 @@ img{
                         <a href="#" class="button">Explore history</a>
                     </div>
 
-                    <img th:src="@{assests/img/about.jpg}" src="assets/img/about.jpg" alt="" class="about__img">
+                    <img th:src="@{/images/about.jpg}" src="assets/img/about.jpg" alt="" class="about__img">
                 </div>
             </section>
 
@@ -658,19 +655,19 @@ img{
 
                 <div class="services__container  bd-grid">
                     <div class="services__content">
-                        <img src="assets/img/medicine.png" alt="" style="width: 64px; height: 64px; margin-bottom: 20px;">
+                        <img th:src="@{/images/medicine.png}" alt="" >
                         <h3 class="services__title">Excellent Medical Products</h3>
                         <p class="services__description">We offer our clients excellent quality products for many years, with the best and trustworthy hands.</p>
                     </div>
 
                     <div class="services__content">
-                        <img src="assets/img/consumer.png" alt="" style="width: 64px; height: 64px; margin-bottom: 20px;">
+                        <img th:src="@{/images/consumer.png}" alt="" style="width: 64px; height: 64px; margin-bottom: 20px;">
                         <h3 class="services__title">Customer Service</h3>
                         <p class="services__description">We offer our clients excellent quality services for many years, with best on time and around the week 24/7 helpine.</p>
                     </div>
 
                     <div class="services__content">
-                        <img src="assets/img/truck.png" alt="" style="width: 64px; height: 64px; margin-bottom: 20px;">
+                        <img th:src="@{/images/truck.png}" alt="" style="width: 64px; height: 64px; margin-bottom: 20px;">
                         <h3 class="services__title">Delivery</h3>
                         <p class="services__description">We offer our clients excellent quality services for many years, with experience and ontime deleivery services.</p>
                     </div>
