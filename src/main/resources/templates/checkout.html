@@ -695,6 +695,9 @@
       #a1{
         color:#069C54;
       }
+      #a2{
+      color:#000000;
+      }
     </style>
 </head>
 <body>
@@ -707,7 +710,7 @@
           <!--========== HEADER ==========-->
 <header class="l-header" id="header">
     <nav class="nav bd-container">
-        <a href="#" class="nav__logo">SUP</a>
+        <a href="#" class="nav__logo" th:href="@{/}">SUP</a>
 
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
@@ -739,7 +742,7 @@
     </nav>
 </header>
 <main class="l-main">
-    <div class="container" style="margin-top: 5%;">
+    <div class="container" style="margin-top: 10%">
 
     <!--Section: Block Content-->
     <section class="mt-5 mb-4">
@@ -752,9 +755,9 @@
 
                 <!-- Card -->
                 <div class="card wish-list pb-1">
-                    <div class="card-body">
+                    <div class="card-body" style="padding:5%; box-shadow: 0 0 50px rgba(6, 156, 84, 0.200);">
 
-                        <h5 class="mb-2">Billing details</h5>
+                        <h5 class="mb-2"><strong>Billing details</strong></h5>
 
                         <!-- Grid row -->
                         <div class="row">
@@ -776,7 +779,7 @@
 
                                 <!-- Last name -->
                                 <div class="md-form md-outline">
-                                    <label for="lastName">Last name</label>
+                                    <label for="lastName" id="a2">Last name</label>
                                     <input type="text" id="lastName" required class="form-control">
                                 </div>
 
@@ -813,7 +816,7 @@
                         <!-- Postcode / ZIP -->
                         <div class="md-form md-outline mt-3">
                             <label for="form16">Postcode / ZIP</label>
-                            <input type="text" maxlength="6" minlength="6" required id="form16" class="form-control">
+                            <input type="text" maxlength="6" minlength="6"  id="form16" class="form-control" required>
                         </div>
 
                         <!-- Town / City -->
@@ -834,15 +837,6 @@
                             <label for="form19">Email address</label>
                             <input type="email" required id="form19" class="form-control">
                         </div>
-
-                        <!-- Additional information -->
-                        <div class="md-form md-outline mt-2">
-                            <label for="form76">Additional information</label>
-                            <textarea id="form76" class="md-textarea form-control" rows="4"></textarea>
-                        </div>
-
-
-
                     </div>
                 </div>
                 <!-- Card -->
@@ -855,7 +849,7 @@
 
                 <!-- Card -->
                 <div class="card mb-4">
-                    <div class="card-body">
+                    <div class="card-body" style="padding:5%; box-shadow: 0 0 50px rgba(6, 156, 84, 0.200);">
 
                         <h5 class="mb-3">The total amount </h5>
 
@@ -866,7 +860,7 @@
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                 Shipping
-                                <span>Gratis</span>
+                                <span>As Early As Possible</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                                 <div>
@@ -878,7 +872,7 @@
                                 <span><strong>₹<span th:text="${total}"></span></strong></span>
                             </li>
                         </ul>
-                        <input type="radio" align="center"checked></input>
+                        <input type="radio" align="center"checked>
                         <span><strong>Cash On Delivery</strong></span>
                         <form action="" method="post" th:action="@{/payNow}" >
 
@@ -890,8 +884,8 @@
                 <!-- Card -->
 
                 <!-- Card -->
-                <div class="card mb-4">
-                    <div class="card-body">
+                <div class="card mb-4" >
+                    <div class="card-body" style="padding:5%; box-shadow: 0 0 50px rgba(6, 156, 84, 0.200);">
 
                         <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
                            aria-expanded="false" aria-controls="collapseExample" id="a1">
@@ -922,19 +916,6 @@
 
 
 </div>
-    <section class="contact section bd-container" id="contact">
-        <div class="contact__container bd-grid">
-            <div class="contact__data">
-                <span class="section-subtitle contact__initial">Let's talk</span>
-                <h2 class="section-title contact__initial">Contact us</h2>
-                <p class="contact__description">If you want to take the best advantage of our customer sercies , Please contact us 24/7</p>
-            </div>
-
-            <div class="contact__button">
-                <a href="#" class="button">Contact us now</a>
-            </div>
-        </div>
-    </section>
 </main>
 
 <footer class="footer section bd-container">
@@ -972,7 +953,7 @@
         <div class="footer__content">
             <h3 class="footer__title">Address</h3>
             <ul>
-                <li>Cahndigarh - India</li>
+                <li>Chandigarh - India</li>
                 <li>Chitkara University</li>
                 <li>9134 - 915 - 606</li>
                 <li>SUPindustries@email.com</li>
