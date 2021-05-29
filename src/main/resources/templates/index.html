@@ -626,7 +626,7 @@ img{
                     <div class="home__data">
                         <h1 class="home__title">Medical Products</h1>
                         <h2 class="home__subtitle">Latest And Trustworthy <br> medical equipments</h2>
-                        <a href="#" class="button">View Menu</a>
+                        <a href="#" th:href="@{/shop}" class="button">Shop Now</a>
                     </div>
 
                     <img th:src="@{/images/home1.jpeg}" alt="" class="home__img">
@@ -638,7 +638,7 @@ img{
             <section class="about section bd-container" id="about">
                 <div class="about__container  bd-grid">
                     <div class="about__data">
-                        <span class="section-subtitle about__initial">About us</span>
+                        <span class="section-subtitle about__initial">About Creators</span>
                         <h2 class="section-title about__initial">We provide the best <br> Medical Equipment And Products</h2>
                         <p class="about__description">We are helping improve our socitey by providing leading edge medical equipment and products on your doorsteps</p>
                         <a href="#" class="button">Explore history</a>
@@ -681,27 +681,27 @@ img{
 
                 <div class="menu__container bd-grid">
                     <div class="menu__content">
-                        <img src="@{/images/med.jpg}" alt="" class="menu__img" style="border-radius: 20%">
+                        <img th:src="@{/images/med.jpg}" alt="" class="menu__img" style="border-radius: 20%">
                         <h3 class="menu__name">Herbal Medicine</h3>
                         <span class="menu__detail">Great for Cough And Cold</span>
-                        <span class="menu__preci">$5.00</span>
-                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                        <span class="menu__preci">₹50</span>
+                        <a href="#" th:href="@{/shop}" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
                     </div>
 
                     <div class="menu__content">
                         <img th:src="@{/images/gloves.jpg}" alt="" class="menu__img" style="border-radius: 20%">
                         <h3 class="menu__name">Rubber Latex Gloves</h3>
                         <span class="menu__detail">Best Quality Surgical Gloves</span>
-                        <span class="menu__preci">$1.00</span>
-                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                        <span class="menu__preci">₹25</span>
+                        <a href="#" th:href="@{/shop}" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
                     </div>
 
                     <div class="menu__content">
                         <img th:src="@{/images/masks.jpg}" alt="" class="menu__img" style="border-radius: 20%">
                         <h3 class="menu__name">Surgical Masks</h3>
                         <span class="menu__detail">Top Quality Masks at Cheap Price</span>
-                        <span class="menu__preci">$0.20</span>
-                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                        <span class="menu__preci">₹20</span>
+                        <a href="#" th:href="@{/shop}" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
                     </div>
                 </div>
             </section>
