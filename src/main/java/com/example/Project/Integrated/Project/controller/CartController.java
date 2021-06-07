@@ -36,8 +36,8 @@ public class CartController {
         model.addAttribute("total",GlobalData.cart.stream().mapToDouble(Product::getPrice).sum());
         return "checkout";
     }
-    @RequestMapping("/payNow")
-    public String finalPage(){
-        return "orderPlaced";
-    }
+//    @RequestMapping("/payNow")
+//    public String finalPage(){
+//        return "orderPlaced";
+//    }
 }
