@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--========== BOX ICONS ==========-->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-    <!--========== CSS ==========-->
-    <link th:href="@{/assets/css/style.css}" rel="stylesheet"/>
+        <!--========== CSS ==========-->
+        <link th:href="@{/assets/css/style.css}" rel="stylesheet"/>
 
-    <title>Integrated Project</title>
-    <style>
+        <title>Integrated Project</title>
+        <style>
             /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
@@ -576,223 +576,213 @@ img{
 }
 
         </style>
-</head>
-<body>
+    </head>
+    <body>
 
-<!--========== SCROLL TOP ==========-->
-<a href="#" class="scrolltop" id="scroll-top">
-    <i class='bx bx-chevron-up scrolltop__icon'></i>
-</a>
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
 
-<!--========== HEADER ==========-->
-<header class="l-header" id="header">
-    <nav class="nav bd-container">
-        <a href="#" class="nav__logo" th:href="@{/}">SUP</a>
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo">SUP</a>
 
-        <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a class="nav__link active-link" th:href=@{/} href="#">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" th:href="@{/shop}" href="#">Shop</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" sec:authorize="isAnonymous()" th:href="@{/login}" href="#">Login</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" sec:authorize="isAuthenticated()" th:href="@{/logout}" href="#">Logout</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" th:href="@{/cart}" href="#">Cart</a>
-                </li>
-                <li class="nav__item">
-                    <span class="nav__link" th:text="${cartCount}">0</span>
-                </li>
-                <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
-            </ul>
-        </div>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                          <a class="nav__link active-link" th:href=@{/} href="#">Home</a>
+                        </li>
+                        <li class="nav__item">
+                          <a class="nav__link" th:href="@{/shop}" href="#">Shop</a>
+                        </li>
+                        <li class="nav__item">
+                          <a class="nav__link" sec:authorize="isAnonymous()" th:href="@{/login}" href="#">Login</a>
+                        </li>
+                        <li class="nav__item">
+                          <a class="nav__link" sec:authorize="isAuthenticated()" th:href="@{/logout}" href="#">Logout</a>
+                        </li>
+                        <li class="nav__item">
+                          <a class="nav__link" th:href="@{/cart}" href="#">Cart</a>
+                        </li>
+                        <li class="nav__item">
+                            <span class="nav__link" th:text="${cartCount}">0</span>
+                        </li>
+                        <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
 
-        <div class="nav__toggle" id="nav-toggle">
-            <i class='bx bx-menu'></i>
-        </div>
-    </nav>
-</header>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
 
-<main class="l-main">
-    <!--========== HOME ==========-->
-    <section class="home" id="home">
-        <div class="home__container bd-container bd-grid">
-            <div class="home__data">
-                <h1 class="home__title">Medical Products</h1>
-                <h2 class="home__subtitle">Latest And Trustworthy <br> medical equipments</h2>
-                <a href="#" th:href="@{/shop}" class="button">Shop Now</a>
-            </div>
+        <main class="l-main">
 
-            <img th:src="@{/images/home1.jpeg}" alt="" class="home__img">
 
-        </div>
-    </section>
+            <!--========== UJJWAL ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">Ujjwal Sharma</span>
+                        <h2 class="section-title about__initial">Database and Backend <br> Expert And Leader</h2>
+                        <p class="about__description">Currently Student of Chitkara University,Punjab Campus. Pursuing Computer Science Engineering.
+                          Handled the Backend Integeration Part and Added Major Database functionality</p>
+                        <!-- <a href="#" class="button">Know More About Us</a> -->
+                        <div>
+                            <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://www.instagram.com/ujjwal1206/" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://www.linkedin.com/in/ujjwal-sharma-a32b51201/" class="footer__social"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                    </div>
 
-    <!--========== ABOUT ==========-->
-    <section class="about section bd-container" id="about">
-        <div class="about__container  bd-grid">
-            <div class="about__data">
-                <span class="section-subtitle about__initial">About Creators</span>
-                <h2 class="section-title about__initial">We provide the best <br> Medical Equipment And Products</h2>
-                <p class="about__description">We are helping improve our socitey by providing leading edge medical equipment and products on your doorsteps</p>
-                <a th:href="@{/about}" class="button">About Creators</a>
-            </div>
 
-            <img th:src="@{/images/about.jpg}" src="assets/img/about.jpg" alt="" class="about__img">
-        </div>
-    </section>
+                    <img th:src="@{/images/ujjwal.jpg}"  alt="" class="about__img">
+                </div>
+            </section>
 
-    <!--========== SERVICES ==========-->
-    <section class="services section bd-container" id="services">
-        <span class="section-subtitle">Offering</span>
-        <h2 class="section-title">Our amazing services</h2>
 
-        <div class="services__container  bd-grid">
-            <div class="services__content">
-                <img th:src="@{/images/medicine.png}" alt="" style="width: 64px; height: 64px; margin-bottom: 20px;">
-                <h3 class="services__title">Excellent Medical Products</h3>
-                <p class="services__description">We offer our clients excellent quality products for many years, with the best and trustworthy hands.</p>
-            </div>
 
-            <div class="services__content">
-                <img th:src="@{/images/consumer.png}" alt="" style="width: 64px; height: 64px; margin-bottom: 20px;">
-                <h3 class="services__title">Customer Service</h3>
-                <p class="services__description">We offer our clients excellent quality services for many years, with best on time and around the week 24/7 helpine.</p>
-            </div>
+            <!--========== Punnet ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">Punet Sharma</span>
+                        <h2 class="section-title about__initial">The Mr. All <br> Rounder</h2>
+                        <p class="about__description">Currently Student of Chitkara University,Punjab Campus. Pursuing Computer Science Engineering.
+                          Handled minor Backend functionalites and Front-end updates of the Project</p>
+                        <!-- <a href="#" class="button">Know More About Us</a> -->
+                        <div>
+                            <a href="https://www.facebook.com/puneet.sharma.75685962" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://www.instagram.com/puneetsharmaaa/" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://www.linkedin.com/in/puneet-kumar-16a54a202/" class="footer__social"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                    </div>
 
-            <div class="services__content">
-                <img th:src="@{/images/truck.png}" alt="" style="width: 64px; height: 64px; margin-bottom: 20px;">
-                <h3 class="services__title">Delivery</h3>
-                <p class="services__description">We offer our clients excellent quality services for many years, with experience and ontime deleivery services.</p>
-            </div>
-        </div>
-    </section>
+                    <img th:src="@{/images/punnet.jpg}"  alt="" class="about__img">
+                </div>
+            </section>
 
-    <!--========== MENU ==========-->
-    <section class="menu section bd-container" id="menu">
-        <span class="section-subtitle">Special</span>
-        <h2 class="section-title">Products of the week</h2>
 
-        <div class="menu__container bd-grid">
-            <div class="menu__content">
-                <img th:src="@{/images/med.jpg}" alt="" class="menu__img" style="border-radius: 20%">
-                <h3 class="menu__name">Herbal Medicine</h3>
-                <span class="menu__detail">Great for Cough And Cold</span>
-                <span class="menu__preci">₹50</span>
-                <a href="#" th:href="@{/shop}" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
-            </div>
 
-            <div class="menu__content">
-                <img th:src="@{/images/gloves.jpg}" alt="" class="menu__img" style="border-radius: 20%">
-                <h3 class="menu__name">Rubber Latex Gloves</h3>
-                <span class="menu__detail">Best Quality Surgical Gloves</span>
-                <span class="menu__preci">₹25</span>
-                <a href="#" th:href="@{/shop}" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
-            </div>
 
-            <div class="menu__content">
-                <img th:src="@{/images/masks.jpg}" alt="" class="menu__img" style="border-radius: 20%">
-                <h3 class="menu__name">Surgical Masks</h3>
-                <span class="menu__detail">Top Quality Masks at Cheap Price</span>
-                <span class="menu__preci">₹20</span>
-                <a href="#" th:href="@{/shop}" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
-            </div>
-        </div>
-    </section>
+            <!--========== Srijan ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">Srijan Rana</span>
+                        <h2 class="section-title about__initial">The Worker <br> The Artist</h2>
+                        <p class="about__description">Currently Student of Chitkara University,Punjab Campus. Pursuing Computer Science Engineering.
+                          Hand held the major Front-End Designing and provided minor helps in Backend</p>
+                        <!-- <a href="#" class="button">Know More About Us</a> -->
+                        <div>
+                            <a href="https://www.facebook.com/srijan.rana.98" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://www.instagram.com/srijanrana77/" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://www.linkedin.com/in/srijan-rana/" class="footer__social"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                    </div>
 
-    <!--===== APP =======-->
-    <!-- <section class="app section bd-container">
-        <div class="app__container bd-grid">
-            <div class="app__data">
-                <span class="section-subtitle app__initial">App</span>
-                <h2 class="section-title app__initial">App is aviable</h2>
-                <p class="app__description">Find our application and download it, you can make reservations, food orders, see your deliveries on the way and much more.</p>
-                <div class="app__stores">
-                    <a href="#"><img src="assets/img/app1.png" alt="" class="app__store"></a>
-                    <a href="#"><img src="assets/img/app2.png" alt="" class="app__store"></a>
+                    <img th:src="@{/images/Srijan.jpg}"  alt="" class="about__img">
+                </div>
+            </section>
+
+
+
+
+            <!--==========Abhisek==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">Abhishek Kumar</span>
+                        <h2 class="section-title about__initial">The Front-End<br> Geek</h2>
+                        <p class="about__description">Currently Student of Chitkara University,Punjab Campus. Pursuing Computer Science Engineering.
+                        Helped with The Front-end technologies</p>
+                        <!-- <a href="#" class="button">Know More About Us</a> -->
+                        <div>
+                            <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                            <a href="https://www.instagram.com/abhishekkumar2085/" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://www.linkedin.com/in/abhishek-6543/" class="footer__social"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                    </div>
+
+                    <img th:src="@{/images/abhishek.jpeg}"  alt="" class="about__img">
+                </div>
+            </section>
+
+
+            <!--========== CONTACT US ==========-->
+            <section class="contact section bd-container" id="contact">
+                <div class="contact__container bd-grid">
+                    <div class="contact__data">
+                        <span class="section-subtitle contact__initial">Let's talk</span>
+                        <h2 class="section-title contact__initial">Contact us</h2>
+                        <p class="contact__description">If you want to take the best advantage of our customer sercies , Please contact us 24/7</p>
+                    </div>
+
+                    <div class="contact__button">
+                        <a href="#" class="button">Contact us now</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">SUP Services</a>
+                    <span class="footer__description">Medical Hub</span>
+                    <div>
+                        <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Delivery</a></li>
+                        <li><a href="#" class="footer__link">Pricing</a></li>
+                        <li><a href="#" class="footer__link">Medical Equipment</a></li>
+                        <li><a href="#" class="footer__link">Bulk Ordering</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Event</a></li>
+                        <li><a href="#" class="footer__link">Contact us</a></li>
+                        <li><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li><a href="#" class="footer__link">Terms of services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Address</h3>
+                    <ul>
+                        <li>Cahndigarh - India</li>
+                        <li>Chitkara University</li>
+                        <li>9134 - 915 - 606</li>
+                        <li>tastyfood@email.com</li>
+                    </ul>
                 </div>
             </div>
-            <img src="assets/img/movil-app.png" alt="" class="app__img">
-        </div>
-    </section> -->
 
-    <!--========== CONTACT US ==========-->
-    <section class="contact section bd-container" id="contact">
-        <div class="contact__container bd-grid">
-            <div class="contact__data">
-                <span class="section-subtitle contact__initial">Let's talk</span>
-                <h2 class="section-title contact__initial">Contact us</h2>
-                <p class="contact__description">If you want to take the best advantage of our customer sercies , Please contact us 24/7</p>
-            </div>
-
-            <div class="contact__button">
-                <a href="#" class="button">Contact us now</a>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!--========== FOOTER ==========-->
-<footer class="footer section bd-container">
-    <div class="footer__container bd-grid">
-        <div class="footer__content">
-            <a href="#" class="footer__logo">SUP Services</a>
-            <span class="footer__description">Medical Hub</span>
-            <div>
-                <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
-            </div>
-        </div>
-
-        <div class="footer__content">
-            <h3 class="footer__title">Services</h3>
-            <ul>
-                <li><a href="#" class="footer__link">Delivery</a></li>
-                <li><a href="#" class="footer__link">Pricing</a></li>
-                <li><a href="#" class="footer__link">Medical Equipment</a></li>
-                <li><a href="#" class="footer__link">Bulk Ordering</a></li>
-            </ul>
-        </div>
-
-        <div class="footer__content">
-            <h3 class="footer__title">Information</h3>
-            <ul>
-                <li><a href="#" class="footer__link">Event</a></li>
-                <li><a href="#" class="footer__link">Contact us</a></li>
-                <li><a href="#" class="footer__link">Privacy policy</a></li>
-                <li><a href="#" class="footer__link">Terms of services</a></li>
-            </ul>
-        </div>
-
-        <div class="footer__content">
-            <h3 class="footer__title">Address</h3>
-            <ul>
-                <li>Chandigarh - India</li>
-                <li>Chitkara University</li>
-                <li>9134 - 915 - 606</li>
-                <li>SUPindustries@email.com</li>
-            </ul>
-        </div>
-    </div>
-
-    <p class="footer__copy">&#169; 2020 SUP. All right reserved</p>
-</footer>
+            <p class="footer__copy">&#169; 2020 SUP. All right reserved</p>
+        </footer>
 
 
-<!--========== SCROLL REVEAL ==========-->
-<script th:src="@{https://unpkg.com/scrollreveal}"></script>
+        <!--========== SCROLL REVEAL ==========-->
+        <script th:src="@{https://unpkg.com/scrollreveal}"></script>
 
-<!--========== MAIN JS ==========-->
-<script type="text/javascript" th:src="@{/assets/js/main.js}"></script>
-<script type="text/javascript" th:src="@{/assets/scss/style.js}"></script>
-<script type="text/javascript">
+        <!--========== MAIN JS ==========-->
+        <script type="text/javascript" th:src="@{/assets/js/main.js}"></script>
+        <script type="text/javascript" th:src="@{/assets/scss/style.js}"></script>
+        <script type="text/javascript">
             /*==================== SHOW MENU ====================*/
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
@@ -902,9 +892,9 @@ sr.reveal(`.home__data, .home__img,
 })
         </script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-</body>
+    </body>
 </html>

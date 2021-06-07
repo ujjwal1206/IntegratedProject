@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
@@ -15,6 +16,11 @@ public class HomeController {
     CategoryService categoryService;
     @Autowired
     ProductService productService;
+
+    @GetMapping("/about")
+    public String about(){
+        return "about";
+    }
 
     @GetMapping({"/","/home"})
     public String home(Model model){
@@ -44,5 +50,6 @@ public class HomeController {
         model.addAttribute("cartCount",GlobalData.cart.size());
         return "viewProduct";
     }
+
 
 }
